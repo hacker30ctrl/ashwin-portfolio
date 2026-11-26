@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashwin Sinha — Developer & Student</title>
+  <meta name="description" content="Personal website of Ashwin Sinha. BCA student at ITM Gorakhpur, Java Full Stack Developer, and backend enthusiast.">
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            neutral: {
+              850: '#1a1a1e',
+              900: '#131316',
+              950: '#0c0c0e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- ================= TOP NAV ================= -->
+  <header class="sticky top-0 z-40 bg-[#0d0f12]/90 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
+      <a href="#about" class="text-sm font-semibold tracking-tight text-white hover:text-blue-400 transition-colors">
+        Ashwin Sinha
+      </a>
+      
+      <nav class="flex items-center gap-5 text-xs font-medium text-slate-400">
+        <a href="#about" class="hover:text-slate-100 transition-colors">About</a>
+        <a href="#projects" class="hover:text-slate-100 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-slate-100 transition-colors">Skills</a>
+        <a href="#education" class="hover:text-slate-100 transition-colors">Education</a>
+        <a href="#contact" class="hover:text-slate-100 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="max-w-5xl mx-auto px-5 py-12 md:py-16 space-y-20 flex-grow">
+
+    <!-- Backend Live Status Banner (detected dynamically) -->
+    <div id="backendBanner" class="hidden p-3 rounded-lg border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 text-xs flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span id="backendStatusText">Connected to Ashwin's Java Backend (port 8080)</span>
+      </div>
+      <span class="font-mono text-[11px] text-emerald-400/80">REST API Ready</span>
+    </div>
+
+    <!-- ================= HERO / INTRO ================= -->
+    <section id="about" class="hero-section">
+      <div class="hero-layout">
+        <div class="hero-copy">
+      <div class="flex items-start justify-between gap-4">
+        <div class="space-y-1.5">
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            Ashwin Sinha
+          </h1>
+          <p class="text-sm sm:text-base text-slate-400">
+            BCA Student & Aspiring Java Backend Developer
+          </p>
+          <p class="text-xs text-slate-500 flex items-center gap-1.5 pt-0.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            Gorakhpur, Uttar Pradesh, India
+          </p>
+        </div>
+
+        <!-- Social Quick Links -->
+        <div class="flex items-center gap-2 shrink-0 pt-1">
+          <a href="https://github.com/hacker30ctrl" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:text-white text-slate-400 transition-colors" title="GitHub">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.1 1.9 2.8 1.3.1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:text-blue-400 text-slate-400 transition-colors" title="LinkedIn">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:text-amber-400 text-slate-400 transition-colors" title="LeetCode">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5-5 7 5 7M16 5l5 7-5 7M14 3l-4 18"/></svg>
+          </a>
+          <a href="mailto:ashwinsinha764@gmail.com" class="p-2 rounded-md border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:text-emerald-400 text-slate-400 transition-colors" title="Email">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+
+        </div>
+        <aside class="hero-portrait" aria-label="Portrait of Ashwin Sinha">
+          <img src="Ashwin.jpeg" alt="Ashwin Sinha" loading="eager">
+          <div class="portrait-overlay"></div>
+          <div class="portrait-topline"><span>PERSONAL PROFILE</span><span>2026</span></div>
+          <div class="portrait-caption">
+            <span class="portrait-kicker">JAVA · BACKEND · PROBLEM SOLVING</span>
+            <h2>Building things<br>that work.</h2>
+            <span class="portrait-status"><span></span> Open to opportunities</span>
+          </div>
+          <span class="portrait-corner" aria-hidden="true"></span>
+        </aside>
+      </div>
+      <!-- Humanized Bio in First-Person -->
+      <div class="hero-bio text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+        <p>
+          Hey! I'm Ashwin. I'm currently pursuing my Bachelor of Computer Applications (BCA) at the <strong>Institute of Technology and Management</strong> (2024–2027) and completed a comprehensive <strong>Java Full Stack Developer Certification</strong>.
+        </p>
+        <p>
+          I gravitated toward backend engineering because I enjoy solving concrete problems—how data flows through an application, how to structure relational tables so queries stay fast, and how to write clean, predictable object-oriented code. My main tools are <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong>.
+        </p>
+        <p>
+          When I'm not building project backends, I'm usually solving Data Structures & Algorithms challenges on <strong>LeetCode</strong> in Java to keep my problem-solving habits sharp and disciplined.
+        </p>
+      </div>
+
+      <!-- Status Pill & Actions -->
+      <div class="hero-actions flex flex-wrap items-center gap-3 pt-2 text-xs">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Open to entry-level Java & Backend roles / internships
+        </span>
+
+        <button onclick="copyEmail()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-colors">
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span id="copyBtnText">ashwinsinha764@gmail.com</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS ================= -->
+    <section id="projects" class="space-y-6 pt-4 border-t border-slate-800/80">
+      <div class="space-y-1">
+        <h2 class="text-lg font-bold text-white tracking-tight">Projects I've Built</h2>
+        <p class="text-xs text-slate-400">Practical applications focused on backend architecture, database integration, and UI design.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">JAVA · DATABASES</span><h3 class="text-base font-semibold text-white mt-2">Hotel Management System</h3><p class="text-xs text-blue-400 font-mono mt-1">Java · JDBC · MySQL</p></div>
+            <a href="https://github.com/hacker30ctrl/Hotel-Management-System" target="_blank" rel="noopener noreferrer" class="project-link">View repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">A Java application for managing day-to-day hotel operations, including room reservations, guest stays, and billing.</p>
+          <ul class="project-points"><li>Organized with object-oriented design and separate data, business, and database responsibilities.</li><li>Uses JDBC and MySQL for reservation and billing workflows.</li></ul>
+        </article>
+
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">JAVA · APPOINTMENTS</span><h3 class="text-base font-semibold text-white mt-2">Hospital Management System</h3><p class="text-xs text-emerald-400 font-mono mt-1">Java · MySQL</p></div>
+            <a href="https://github.com/hacker30ctrl/Hospital-Management-System" target="_blank" rel="noopener noreferrer" class="project-link">View repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">An appointment booking application for organizing patient, doctor, and appointment information.</p>
+          <ul class="project-points"><li>Uses relational data to keep patient and appointment records connected.</li><li>Built as a Java project with a MySQL database.</li></ul>
+        </article>
+
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">CAPSTONE · E-COMMERCE</span><h3 class="text-base font-semibold text-white mt-2">All Rounder Store</h3><p class="text-xs text-amber-300 font-mono mt-1">HTML · CSS · JavaScript</p></div>
+            <a href="https://github.com/hacker30ctrl/scaling-octo-sniffle" target="_blank" rel="noopener noreferrer" class="project-link">View repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">A responsive e-commerce capstone with product categories, price sorting, and a shopping cart.</p>
+          <ul class="project-points"><li>Supports browsing across several product categories.</li><li>Includes price sorting and cart total interactions.</li></ul>
+        </article>
+
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">FRONTEND · UI CLONE</span><h3 class="text-base font-semibold text-white mt-2">Myntra E-Commerce UI Clone</h3><p class="text-xs text-slate-400 font-mono mt-1">HTML · CSS · JavaScript</p></div>
+            <a href="https://github.com/hacker30ctrl/Myntra-Clone" target="_blank" rel="noopener noreferrer" class="project-link">View repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">A responsive recreation of the Myntra shopping experience, focused on its product catalog and page layout.</p>
+        </article>
+
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">PRACTICE · JAVA</span><h3 class="text-base font-semibold text-white mt-2">LeetCode DSA Solutions</h3><p class="text-xs text-blue-400 font-mono mt-1">Java · Data Structures · Algorithms</p></div>
+            <a href="https://github.com/hacker30ctrl/DSA-LeetCode" target="_blank" rel="noopener noreferrer" class="project-link">View repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">A growing collection of LeetCode solutions written while practicing data structures and algorithms in Java.</p>
+        </article>
+
+        <article class="project-card p-5 rounded-xl space-y-3">
+          <div class="flex items-start justify-between gap-3">
+            <div><span class="project-type">INTERNSHIP · WEB DEVELOPMENT</span><h3 class="text-base font-semibold text-white mt-2">ApexPlanet Web Projects</h3><p class="text-xs text-emerald-400 font-mono mt-1">HTML · CSS · JavaScript</p></div>
+            <a href="https://github.com/hacker30ctrl/ApexPlanet" target="_blank" rel="noopener noreferrer" class="project-link">Task 1 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">A set of internship exercises covering web fundamentals, forms and to-do lists, an API-powered joke generator, and a multi-page portfolio.</p>
+          <div class="project-repo-links"><a href="https://github.com/hacker30ctrl/apexplanet-task-2" target="_blank" rel="noopener noreferrer">Task 2</a><a href="https://github.com/hacker30ctrl/apexplanet-task-3" target="_blank" rel="noopener noreferrer">Task 3</a><a href="https://github.com/hacker30ctrl/apexplanet-task-4" target="_blank" rel="noopener noreferrer">Task 4</a></div>
+        </article>
+      </div>    </section>
+
+    <!-- ================= TECHNICAL SKILLS ================= -->
+    <section id="skills" class="skills-section space-y-6 pt-4 border-t border-slate-800/80">
+      <div class="space-y-1">
+        <h2 class="text-lg font-bold text-white tracking-tight">Skills & Technologies</h2>
+        <p class="text-xs text-slate-400">A practical toolkit shaped by my projects and problem-solving practice.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-kicker">01 / LANGUAGES</span>
+          <h3>Programming</h3>
+          <div class="skill-tags"><span>Java</span><span>SQL</span><span>JavaScript</span><span>C</span><span>C++</span></div>
+          <p>Java is my primary language for backend projects and algorithm practice.</p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-kicker">02 / SERVER SIDE</span>
+          <h3>Backend & APIs</h3>
+          <div class="skill-tags"><span>JDBC</span><span>REST APIs</span><span>Spring Boot</span><span>Hibernate</span></div>
+          <p>Building Java services and connecting application logic to persistent data.</p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-kicker">03 / CLIENT SIDE</span>
+          <h3>Frontend Development</h3>
+          <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>Responsive UI</span><span>DOM</span></div>
+          <p>Creating responsive pages with forms, API interactions, product sorting, and cart behavior.</p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-kicker">04 / DATA</span>
+          <h3>Databases</h3>
+          <div class="skill-tags"><span>MySQL</span><span>SQL</span><span>Relational Design</span><span>Queries</span></div>
+          <p>Working with relational data, connected records, and queries for management apps.</p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-kicker">05 / PROBLEM SOLVING</span>
+          <h3>DSA & Core Concepts</h3>
+          <div class="skill-tags"><span>LeetCode</span><span>Data Structures</span><span>Algorithms</span><span>OOP</span><span>DBMS</span><span>Operating Systems</span></div>
+          <p>Practicing solutions in Java and building a foundation in computer science concepts.</p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-kicker">06 / WORKFLOW</span>
+          <h3>Developer Tools</h3>
+          <div class="skill-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Eclipse</span><span>Postman</span></div>
+          <p>Using version control, IDEs, and API tools throughout development.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION & CERTIFICATIONS ================= -->    <!-- ================= EDUCATION & CERTIFICATIONS ================= -->
+    <section id="education" class="education-section space-y-6 pt-4 border-t border-slate-800/80">
+      <div class="space-y-1">
+        <h2 class="text-lg font-bold text-white tracking-tight">Education & Certification</h2>
+        <p class="text-xs text-slate-400">My academic path, professional training, and school results.</p>
+      </div>
+
+      <div class="education-grid">
+        <article class="education-card degree-card">
+          <div class="education-meta"><span>01 / UNDERGRADUATE</span><span>2024 – 2027</span></div>
+          <div class="education-icon"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+          <span class="education-status">IN PROGRESS</span>
+          <h3>Bachelor of Computer Applications</h3>
+          <p class="education-school">Institute of Technology and Management</p>
+          <p class="education-description">Studying Computer Science, Database Management, and Software Engineering.</p>
+        </article>
+
+        <article class="education-card certification-card">
+          <div class="education-meta"><span>02 / PROFESSIONAL TRAINING</span><span>JULY 2026</span></div>
+          <div class="education-icon"><i data-lucide="award" class="w-5 h-5"></i></div>
+          <span class="education-status completed">COMPLETED</span>
+          <h3>Java Full Stack Developer Certification</h3>
+          <p class="education-school">Intensive hands-on certification program</p>
+          <p class="education-description">Covered Core Java, Advanced Java, Spring Boot microservices, Hibernate, and MySQL.</p>
+        </article>
+
+        <div class="school-results">
+          <div class="school-results-heading"><span>03 / SCHOOLING</span><span>CBSE</span></div>
+          <div class="school-score-grid">
+            <article class="school-score-card">
+              <div class="school-score-label"><div><h3>Senior Secondary</h3><p>Class XII</p></div><strong>85.4%</strong></div>
+              <div class="score-track" role="img" aria-label="Class XII score: 85.4 percent"><span style="width:85.4%"></span></div>
+            </article>
+            <article class="school-score-card">
+              <div class="school-score-label"><div><h3>Secondary School</h3><p>Class X</p></div><strong>79.0%</strong></div>
+              <div class="score-track" role="img" aria-label="Class X score: 79 percent"><span style="width:79%"></span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="space-y-6 pt-4 border-t border-slate-800/80">
+      <div class="space-y-1">
+        <h2 class="text-lg font-bold text-white tracking-tight">Let's Connect</h2>
+        <p class="text-xs text-slate-400">Feel free to reach out if you have an opening, a question, or just want to chat backend tech.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <a href="mailto:ashwinsinha764@gmail.com" class="p-4 rounded-xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors space-y-1 block">
+          <span class="text-slate-500 block text-[11px] font-mono">Email</span>
+          <span class="text-white font-medium break-all">ashwinsinha764@gmail.com</span>
+        </a>
+
+        <a href="tel:6307139892" class="p-4 rounded-xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors space-y-1 block">
+          <span class="text-slate-500 block text-[11px] font-mono">Phone</span>
+          <span class="text-white font-medium">+91 6307139892</span>
+        </a>
+
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/30 space-y-1">
+          <span class="text-slate-500 block text-[11px] font-mono">Location</span>
+          <span class="text-white font-medium">Gorakhpur, UP, India</span>
+        </div>
+      </div>
+
+      <!-- Contact form opens a prefilled email to Ashwin -->
+      <div class="p-5 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <h3 class="text-sm font-semibold text-white">Send a quick note</h3>
+        <p class="text-xs text-slate-400">Submitting opens your email app with the message addressed to ashwinsinha764@gmail.com. Review and send it there.</p>
+        
+        <form id="contactForm" onsubmit="handleContact(event)" class="space-y-3 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-slate-400 mb-1">Your Name</label>
+              <input type="text" id="nameInput" required placeholder="Name" class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-slate-600">
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1">Your Email</label>
+              <input type="email" id="emailInput" required placeholder="email@example.com" class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-slate-600">
+            </div>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Message</label>
+            <textarea id="messageInput" rows="3" required placeholder="Hi Ashwin, saw your portfolio..." class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-slate-600"></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="px-4 py-2 rounded-lg bg-white text-slate-950 font-medium hover:bg-slate-200 transition-colors">
+            Send Message
+          </button>
+          <span id="formFeedback" class="text-xs ml-3 text-slate-400"></span>
+        </form>
+      </div></section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800/80 py-6 text-xs text-slate-500">
+    <div class="max-w-3xl mx-auto px-5 flex items-center justify-between">
+      <span>© 2026 Ashwin Sinha</span>
+      <div class="flex items-center gap-4">
+        <a href="#about" class="hover:text-slate-300 transition-colors">Top ↑</a>
+        <a href="https://github.com/hacker30ctrl" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    lucide.createIcons();
+
+    // Check if Java backend is running on port 8080
+    const API_BASE = window.location.origin.includes(':8080') ? '' : 'http://localhost:8080';
+
+    fetch(API_BASE + '/api/status')
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'UP') {
+          const banner = document.getElementById('backendBanner');
+          if (banner) {
+            banner.classList.remove('hidden');
+            document.getElementById('backendStatusText').innerText = 
+              `Connected to Ashwin's Java Backend (${data.runtime}) — Ready`;
+          }
+        }
+      })
+      .catch(() => {
+        // Backend not currently running; site functions standalone cleanly
+      });
+
+    // Copy Email Helper
+    function copyEmail() {
+      navigator.clipboard.writeText('ashwinsinha764@gmail.com').then(() => {
+        const btn = document.getElementById('copyBtnText');
+        const orig = btn.innerText;
+        btn.innerText = 'Copied to clipboard!';
+        setTimeout(() => { btn.innerText = orig; }, 2000);
+      });
+    }
+
+    // Open a prefilled email to Ashwin
+    function handleContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('nameInput').value.trim();
+      const email = document.getElementById('emailInput').value.trim();
+      const message = document.getElementById('messageInput').value.trim();
+      const feedback = document.getElementById('formFeedback');
+      const subject = `Portfolio message from ${name}`;
+      const body = `${message}\n\nFrom: ${name} (${email})`;
+      const mailto = `mailto:ashwinsinha764@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      feedback.className = 'text-xs ml-3 text-slate-400';
+      feedback.innerText = 'Opening your email app. Review and send the message to finish.';
+      window.location.href = mailto;
+    }  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
